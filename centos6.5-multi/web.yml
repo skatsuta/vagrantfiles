@@ -1,0 +1,9 @@
+---
+- hosts: all
+  sudo: yes
+  remote_user: vagrant
+  vars:
+    username: newuser
+  tasks:
+    - name: Add an user
+      user: name={{ username }} group=vagrant shell=/bin/bash
